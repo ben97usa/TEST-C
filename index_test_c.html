@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST C - 85 Question Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .question-block {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .question-block p {
+      font-weight: bold;
+    }
+    .option {
+      display: block;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fafafa;
+      cursor: pointer;
+    }
+    .option:hover {
+      background: #eee;
+    }
+    .correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .wrong {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    .icon {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+<h1>TEST C - 85 Question Quiz</h1>
+<div id="quiz-container">
+<div class='question-block' id='q1'>
+<p>1. Which skin conditions can microdermabrasion help diminish?</p>
+<div class='option' onclick="checkAnswer(this, 'q1', 'D')" data-opt='A'>A. Psoriasis, vitiligo, herpes outbreaks <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q1', 'D')" data-opt='B'>B. Severe burns, deep scars, infections <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q1', 'D')" data-opt='C'>C. Acne rosacea, keloids, eczema <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q1', 'D')" data-opt='D'>D. Sun damage, pigmentation, wrinkles <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q2'>
+<p>2. Why is it essential for estheticians to be aware of their clients' skin type and recent treatments before applying chemical exfoliants?</p>
+<div class='option' onclick="checkAnswer(this, 'q2', 'D')" data-opt='A'>A. Match client preferences <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q2', 'D')" data-opt='B'>B. Sell more products <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q2', 'D')" data-opt='C'>C. Increase treatment time <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q2', 'D')" data-opt='D'>D. Prevent adverse reactions <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q3'>
+<p>3. Which unique benefits and features are associated with different types of electrodes in high-frequency machine treatments?</p>
+<div class='option' onclick="checkAnswer(this, 'q3', 'C')" data-opt='A'>A. Reducing product absorption <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q3', 'C')" data-opt='B'>B. Causing muscular contractions <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q3', 'C')" data-opt='C'>C. Physiological reactions in esthetic treatments <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q3', 'C')" data-opt='D'>D. Increased risk of skin damage <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q4'>
+<p>4. Which factor is a major contraindication for using electrotherapy on clients?</p>
+<div class='option' onclick="checkAnswer(this, 'q4', 'D')" data-opt='A'>A. Allergy to certain products <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q4', 'D')" data-opt='B'>B. Clients who are lactose intolerant <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q4', 'D')" data-opt='C'>C. Mild skin sensitivity <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q4', 'D')" data-opt='D'>D. Pacemaker or heart condition <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q5'>
+<p>5. What is the BEST way to ensure proper infection control standards during a client consultation for hair removal services?</p>
+<div class='option' onclick="checkAnswer(this, 'q5', 'C')" data-opt='A'>A. Use the same draping repeatedly <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q5', 'C')" data-opt='B'>B. Rely on gloves only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q5', 'C')" data-opt='C'>C. Wash hands and drape client <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q5', 'C')" data-opt='D'>D. Skip hand washing before service <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q6'>
+<p>6. Which client is MOST LIKELY to have contraindications for receiving light therapy?</p>
+<div class='option' onclick="checkAnswer(this, 'q6', 'C')" data-opt='A'>A. Client with acne-prone skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q6', 'C')" data-opt='B'>B. Client with dry skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q6', 'C')" data-opt='C'>C. Client with photosensitivity <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q6', 'C')" data-opt='D'>D. Client after a facial massage <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q7'>
+<p>7. What must be done by the esthetician regarding client draping and hand washing before beginning treatment?</p>
+<div class='option' onclick="checkAnswer(this, 'q7', 'D')" data-opt='A'>A. Use hand sanitizer only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q7', 'D')" data-opt='B'>B. Skip hand washing completely <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q7', 'D')" data-opt='C'>C. Wipe hands on towel only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q7', 'D')" data-opt='D'>D. Drape client and wash hands <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q8'>
+<p>8. What safety precautions should be taken when using electronically charged tweezers for hair removal?</p>
+<div class='option' onclick="checkAnswer(this, 'q8', 'D')" data-opt='A'>A. Skip warming the skin area <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q8', 'D')" data-opt='B'>B. Disinfect tweezers with fire <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q8', 'D')" data-opt='C'>C. Ignore client's skin sensitivity <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q8', 'D')" data-opt='D'>D. Follow manufacturer's instructions <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q9'>
+<p>9. What is the FIRST step in the eyebrow tweezing procedure?</p>
+<div class='option' onclick="checkAnswer(this, 'q9', 'D')" data-opt='A'>A. Apply soothing lotion <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q9', 'D')" data-opt='B'>B. Trim the longer hairs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q9', 'D')" data-opt='C'>C. Cleanse the eyebrows and skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q9', 'D')" data-opt='D'>D. Consult with the client <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q10'>
+<p>10. What method of permanent hair removal destroys the papilla, making regrowth impossible?</p>
+<div class='option' onclick="checkAnswer(this, 'q10', 'A')" data-opt='A'>A. Electrolysis <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q10', 'A')" data-opt='B'>B. Threading <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q10', 'A')" data-opt='C'>C. Laser Hair Removal <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q10', 'A')" data-opt='D'>D. Sugaring <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q11'>
+<p>11. What is the effectiveness of electronically charged tweezers for hair removal?</p>
+<div class='option' onclick="checkAnswer(this, 'q11', 'A')" data-opt='A'>A. Controversial and debated <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q11', 'A')" data-opt='B'>B. Highly effective and proven <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q11', 'A')" data-opt='C'>C. Completely ineffective and unsafe <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q11', 'A')" data-opt='D'>D. Universally accepted method <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q12'>
+<p>12. Which area of the face is tweezing LEAST ideal for removing hair?</p>
+<div class='option' onclick="checkAnswer(this, 'q12', 'C')" data-opt='A'>A. Removing stray eyebrow hairs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q12', 'C')" data-opt='B'>B. Shaping eyebrows <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q12', 'C')" data-opt='C'>C. Dense facial hair growth <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q12', 'C')" data-opt='D'>D. Dark, coarse facial hair <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q13'>
+<p>13. What is the difference between depilation and epilation?</p>
+<div class='option' onclick="checkAnswer(this, 'q13', 'A')" data-opt='A'>A. Depilation: skin level; Epilation: follicle level <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q13', 'A')" data-opt='B'>B. Depilation: temporary; Epilation: permanent <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q13', 'A')" data-opt='C'>C. Depilation: pulling hair; Epilation: cutting hair <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q13', 'A')" data-opt='D'>D. Depilation: hard wax; Epilation: soft wax <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q14'>
+<p>14. What is the potential risk of going over a waxed area a second time during the same service?</p>
+<div class='option' onclick="checkAnswer(this, 'q14', 'A')" data-opt='A'>A. Skin damage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q14', 'A')" data-opt='B'>B. Faster hair regrowth <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q14', 'A')" data-opt='C'>C. Wax ineffectiveness <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q14', 'A')" data-opt='D'>D. Decreased client discomfort <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q15'>
+<p>15. Define the term "epilation" in the context of hair removal.</p>
+<div class='option' onclick="checkAnswer(this, 'q15', 'A')" data-opt='A'>A. Removing hair from the follicle's bottom <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q15', 'A')" data-opt='B'>B. Applying depilatory creams or lotions <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q15', 'A')" data-opt='C'>C. Removing hair at skin level <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q15', 'A')" data-opt='D'>D. Using electric current for removal <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q16'>
+<p>16. Which hair removal method is suitable for clients with sensitive skin or prone to bumps and redness after waxing?</p>
+<div class='option' onclick="checkAnswer(this, 'q16', 'A')" data-opt='A'>A. Tweezing <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q16', 'A')" data-opt='B'>B. Sugaring <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q16', 'A')" data-opt='C'>C. Waxing <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q16', 'A')" data-opt='D'>D. Threading <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q17'>
+<p>17. How can eyeglasses impede the tweezing process?</p>
+<div class='option' onclick="checkAnswer(this, 'q17', 'A')" data-opt='A'>A. Hinders visibility and precision <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q17', 'A')" data-opt='B'>B. Causes skin sensitivity issues <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q17', 'A')" data-opt='C'>C. Damages eyebrow hair structure <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q17', 'A')" data-opt='D'>D. Increases chances of ingrown hairs <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q18'>
+<p>18. What should clients avoid following a waxing treatment to minimize skin irritation and redness?</p>
+<div class='option' onclick="checkAnswer(this, 'q18', 'B')" data-opt='A'>A. Exfoliating the waxed area <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q18', 'B')" data-opt='B'>B. Sun exposure and excessive heat <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q18', 'B')" data-opt='C'>C. Applying fragranced creams immediately <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q18', 'B')" data-opt='D'>D. Using hot water for cleansing <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q19'>
+<p>19. Which type of cosmetic is specifically used to cover skin imperfections, such as blemishes and dark circles?</p>
+<div class='option' onclick="checkAnswer(this, 'q19', 'A')" data-opt='A'>A. Concealer <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q19', 'A')" data-opt='B'>B. Primer <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q19', 'A')" data-opt='C'>C. Powder <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q19', 'A')" data-opt='D'>D. Foundation <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q20'>
+<p>20. What is the FIRST step in performing makeup application techniques on a client?</p>
+<div class='option' onclick="checkAnswer(this, 'q20', 'A')" data-opt='A'>A. Cleanse and tone the skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q20', 'A')" data-opt='B'>B. Apply foundation and powder <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q20', 'A')" data-opt='C'>C. Apply eyeshadow and eyeliner <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q20', 'A')" data-opt='D'>D. Apply blush and lip gloss <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q21'>
+<p>21. Which tool is MOST important for the proper application of artificial eyelashes?</p>
+<div class='option' onclick="checkAnswer(this, 'q21', 'A')" data-opt='A'>A. Tweezers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q21', 'A')" data-opt='B'>B. Eyelash curler <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q21', 'A')" data-opt='C'>C. Makeup sponge <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q21', 'A')" data-opt='D'>D. Foundation brush <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q22'>
+<p>22. What is the FIRST step in setting up a facial treatment area?</p>
+<div class='option' onclick="checkAnswer(this, 'q22', 'A')" data-opt='A'>A. Prepare the treatment room <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q22', 'A')" data-opt='B'>B. Sterilize all equipment <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q22', 'A')" data-opt='C'>C. Review OSHA Safety Data Sheets <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q22', 'A')" data-opt='D'>D. Apply gloves and apron <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q23'>
+<p>23. What is the BEST way for an esthetician to prepare their treatment room for the next client?</p>
+<div class='option' onclick="checkAnswer(this, 'q23', 'A')" data-opt='A'>A. Clean and disinfect surfaces <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q23', 'A')" data-opt='B'>B. Replace used towels only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q23', 'A')" data-opt='C'>C. Sweep the floor only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q23', 'A')" data-opt='D'>D. Ventilate room without cleaning <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q24'>
+<p>24. What is the PRIMARY purpose of a Safety Data Sheet (SDS)?</p>
+<div class='option' onclick="checkAnswer(this, 'q24', 'A')" data-opt='A'>A. To provide information on product safety <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q24', 'A')" data-opt='B'>B. For product shelf-life estimation <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q24', 'A')" data-opt='C'>C. To advertise cosmetic products <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q24', 'A')" data-opt='D'>D. To list product pricing details <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q25'>
+<p>25. How should the treatment room be cleaned at the end of the day?</p>
+<div class='option' onclick="checkAnswer(this, 'q25', 'D')" data-opt='A'>A. Use dry cloth only. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q25', 'D')" data-opt='B'>B. Vacuum floors only. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q25', 'D')" data-opt='C'>C. Wipe with water and towel. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q25', 'D')" data-opt='D'>D. Disinfect counters, sinks, surfaces, floors. <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q26'>
+<p>26. How should an esthetician retrieve items from a drawer without contaminating them?</p>
+<div class='option' onclick="checkAnswer(this, 'q26', 'B')" data-opt='A'>A. Use alcohol-based hand sanitizer <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q26', 'B')" data-opt='B'>B. Use clean gloves or disinfected tongs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q26', 'B')" data-opt='C'>C. Pick up with bare hands <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q26', 'B')" data-opt='D'>D. Use a tissue or paper towel <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q27'>
+<p>27. What is the BEST method to maintain high standards of hygiene, cleanliness, and infection control in an esthetician's workspace?</p>
+<div class='option' onclick="checkAnswer(this, 'q27', 'D')" data-opt='A'>A. Wipe surfaces occasionally <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q27', 'D')" data-opt='B'>B. Rely on air sanitizers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q27', 'D')" data-opt='C'>C. Use gloves only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q27', 'D')" data-opt='D'>D. Clean and disinfect regularly <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q28'>
+<p>28. What is the proper procedure for handling makeup brushes and applicators to prevent infection?</p>
+<div class='option' onclick="checkAnswer(this, 'q28', 'C')" data-opt='A'>A. Double-dip into products <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q28', 'C')" data-opt='B'>B. Reuse without disinfecting <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q28', 'C')" data-opt='C'>C. Use new or disinfected tools <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q28', 'C')" data-opt='D'>D. Clean with water only <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q29'>
+<p>29. What precaution should be taken when applying makeup to prevent contamination?</p>
+<div class='option' onclick="checkAnswer(this, 'q29', 'B')" data-opt='A'>A. Reuse applicators multiple times <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q29', 'B')" data-opt='B'>B. Avoid touching product with fingers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q29', 'B')" data-opt='C'>C. Wash products after each use <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q29', 'B')" data-opt='D'>D. Apply makeup with bare hands <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q30'>
+<p>30. What precautions should be taken when handling blood-stained or contaminated materials?</p>
+<div class='option' onclick="checkAnswer(this, 'q30', 'B')" data-opt='A'>A. Place in regular waste bin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q30', 'B')" data-opt='B'>B. Double bag or use biohazard container <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q30', 'B')" data-opt='C'>C. Use bare hands for disposal <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q30', 'B')" data-opt='D'>D. Rinse off with water only <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q31'>
+<p>31. What should be done with disposable drapes and other disposable items after a service?</p>
+<div class='option' onclick="checkAnswer(this, 'q31', 'A')" data-opt='A'>A. Dispose in a covered waste container. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q31', 'A')" data-opt='B'>B. Reuse for the next client. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q31', 'A')" data-opt='C'>C. Wash and disinfect for reuse. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q31', 'A')" data-opt='D'>D. Store in a clean drawer. <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q32'>
+<p>32. How should an esthetician maintain cleanliness and prevent cross-contamination of applicators, strips, gauze, and cotton supplies?</p>
+<div class='option' onclick="checkAnswer(this, 'q32', 'A')" data-opt='A'>A. Store in covered containers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q32', 'A')" data-opt='B'>B. Leave on open shelves <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q32', 'A')" data-opt='C'>C. Place on clean towels <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q32', 'A')" data-opt='D'>D. Keep in drawers <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q33'>
+<p>33. What information is provided by Safety Data Sheets (SDS)?</p>
+<div class='option' onclick="checkAnswer(this, 'q33', 'C')" data-opt='A'>A. Makeup application techniques <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q33', 'C')" data-opt='B'>B. Cosmetic product ingredient list <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q33', 'C')" data-opt='C'>C. Exposure control and safety information <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q33', 'C')" data-opt='D'>D. Client skin type analysis <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q34'>
+<p>34. What should be placed on a clean and disinfected workstation before setting up supplies?</p>
+<div class='option' onclick="checkAnswer(this, 'q34', 'C')" data-opt='A'>A. Dirty or damp cloth <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q34', 'C')" data-opt='B'>B. Used tissue or napkin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q34', 'C')" data-opt='C'>C. Clean towel (paper or cloth) <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q34', 'C')" data-opt='D'>D. Plastic wrap or sheet <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q35'>
+<p>35. Which procedures are essential before and after a service to ensure client safety and comply with health regulations?</p>
+<div class='option' onclick="checkAnswer(this, 'q35', 'C')" data-opt='A'>A. Applying makeup immediately <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q35', 'C')" data-opt='B'>B. Disinfecting workspace only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q35', 'C')" data-opt='C'>C. Pre- and post-service procedures <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q35', 'C')" data-opt='D'>D. Ignoring health regulations <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q36'>
+<p>36. What is the primary goal of proper cleaning and disinfection protocols after each service?</p>
+<div class='option' onclick="checkAnswer(this, 'q36', 'B')" data-opt='A'>A. Reduce service time <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q36', 'B')" data-opt='B'>B. Prevent cross-contamination and infection <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q36', 'B')" data-opt='C'>C. Maintain aesthetic appeal <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q36', 'B')" data-opt='D'>D. Enhance product performance <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q37'>
+<p>37. What infection control standards should be followed for makeup station testers and applicators?</p>
+<div class='option' onclick="checkAnswer(this, 'q37', 'C')" data-opt='A'>A. Reuse applicators for multiple clients <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q37', 'C')" data-opt='B'>B. Use fingers for product application <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q37', 'C')" data-opt='C'>C. Use clean spatulas and avoid double-dipping <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q37', 'C')" data-opt='D'>D. Store products in uncovered containers <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q38'>
+<p>38. What factors should estheticians consider when furnishing a treatment room?</p>
+<div class='option' onclick="checkAnswer(this, 'q38', 'B')" data-opt='A'>A. Aesthetic appeal only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q38', 'B')" data-opt='B'>B. Client comfort and safety <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q38', 'B')" data-opt='C'>C. Color scheme only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q38', 'B')" data-opt='D'>D. Room size only <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q39'>
+<p>39. How should esthetician equipment be cleaned and disinfected after use?</p>
+<div class='option' onclick="checkAnswer(this, 'q39', 'D')" data-opt='A'>A. Wipe with a dry cloth. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q39', 'D')" data-opt='B'>B. Use alcohol-based sanitizer. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q39', 'D')" data-opt='C'>C. Wash with water only. <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q39', 'D')" data-opt='D'>D. Clean and use EPA-registered disinfectant. <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q40'>
+<p>40. Why is proper infection control essential during extractions?</p>
+<div class='option' onclick="checkAnswer(this, 'q40', 'A')" data-opt='A'>A. Prevents cross-contamination <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q40', 'A')" data-opt='B'>B. Improves product absorption <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q40', 'A')" data-opt='C'>C. Increases treatment efficiency <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q40', 'A')" data-opt='D'>D. Enhances client relaxation <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q41'>
+<p>41. Why is proper infection control crucial during extractions?</p>
+<div class='option' onclick="checkAnswer(this, 'q41', 'B')" data-opt='A'>A. Shortens treatment time <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q41', 'B')" data-opt='B'>B. Prevents disease transmission <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q41', 'B')" data-opt='C'>C. Increases product absorption <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q41', 'B')" data-opt='D'>D. Improves client comfort <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q42'>
+<p>42. Why is it important for estheticians to maintain high standards of professionalism and personal hygiene?</p>
+<div class='option' onclick="checkAnswer(this, 'q42', 'D')" data-opt='A'>A. Reduce product usage costs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q42', 'D')" data-opt='B'>B. Faster service completion <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q42', 'D')" data-opt='C'>C. To impress clients visually <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q42', 'D')" data-opt='D'>D. Prevent cross-contamination and infection <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q43'>
+<p>43. What is the proper method to retrieve items after starting a service?</p>
+<div class='option' onclick="checkAnswer(this, 'q43', 'A')" data-opt='A'>A. Use clean tongs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q43', 'A')" data-opt='B'>B. Use bare hands <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q43', 'A')" data-opt='C'>C. Use dirty tongs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q43', 'A')" data-opt='D'>D. Use gloved hands <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q44'>
+<p>44. How should contaminated, single-use items be disposed of in an esthetician's treatment area?</p>
+<div class='option' onclick="checkAnswer(this, 'q44', 'C')" data-opt='A'>A. Place on a clean towel <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q44', 'C')" data-opt='B'>B. Wash and reuse them <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q44', 'C')" data-opt='C'>C. In a covered waste receptacle <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q44', 'C')" data-opt='D'>D. Throw in regular trash bin <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q45'>
+<p>45. What is the IMPORTANCE of proper client draping during a service?</p>
+<div class='option' onclick="checkAnswer(this, 'q45', 'A')" data-opt='A'>A. Maintains client privacy and comfort <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q45', 'A')" data-opt='B'>B. Prevents chemical ingredient reactions <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q45', 'A')" data-opt='C'>C. Increases product absorption rate <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q45', 'A')" data-opt='D'>D. Reduces required disinfection steps <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q46'>
+<p>46. What is a key consideration when setting up the treatment area with single-use supplies?</p>
+<div class='option' onclick="checkAnswer(this, 'q46', 'D')" data-opt='A'>A. Mixing single and multi-use items <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q46', 'D')" data-opt='B'>B. Reusing supplies for multiple clients <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q46', 'D')" data-opt='C'>C. Not disinfecting the counter <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q46', 'D')" data-opt='D'>D. Order of procedure application <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q47'>
+<p>47. What tasks should be included in an end-of-day checklist for an esthetician?</p>
+<div class='option' onclick="checkAnswer(this, 'q47', 'D')" data-opt='A'>A. Disinfect tools only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q47', 'D')" data-opt='B'>B. Replenish product stock only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q47', 'D')" data-opt='C'>C. Review client appointments only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q47', 'D')" data-opt='D'>D. Clean and prepare treatment room <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q48'>
+<p>48. What is the BEST practice for storing single-use items to prevent contamination?</p>
+<div class='option' onclick="checkAnswer(this, 'q48', 'A')" data-opt='A'>A. In covered, labeled containers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q48', 'A')" data-opt='B'>B. On open countertops <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q48', 'A')" data-opt='C'>C. In uncovered drawers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q48', 'A')" data-opt='D'>D. In open baskets <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q49'>
+<p>49. Which is the BEST way to store applicators, strips, gauze, and cotton supplies when not in use?</p>
+<div class='option' onclick="checkAnswer(this, 'q49', 'A')" data-opt='A'>A. In covered containers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q49', 'A')" data-opt='B'>B. On an open tray <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q49', 'A')" data-opt='C'>C. In uncovered drawers <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q49', 'A')" data-opt='D'>D. On a nearby countertop <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q50'>
+<p>50. What is the purpose of placing used instruments in an Environmental Protection Agency (EPA)-registered disinfectant solution?</p>
+<div class='option' onclick="checkAnswer(this, 'q50', 'A')" data-opt='A'>A. To kill all microbes effectively <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q50', 'A')" data-opt='B'>B. For storage and organization <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q50', 'A')" data-opt='C'>C. To prevent oxidation damage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q50', 'A')" data-opt='D'>D. To clean the instruments only <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q51'>
+<p>51. Which skin type typically has a smooth texture and minimal skin issues?</p>
+<div class='option' onclick="checkAnswer(this, 'q51', 'A')" data-opt='A'>A. Normal skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q51', 'A')" data-opt='B'>B. Oily skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q51', 'A')" data-opt='C'>C. Dry skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q51', 'A')" data-opt='D'>D. Combination skin <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q52'>
+<p>52. Which characteristic best describes Fitzpatrick Skin Type III?</p>
+<div class='option' onclick="checkAnswer(this, 'q52', 'A')" data-opt='A'>A. Sometimes burns, tans gradually <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q52', 'A')" data-opt='B'>B. Always burns, never tans <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q52', 'A')" data-opt='C'>C. Rarely burns, tans easily <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q52', 'A')" data-opt='D'>D. Very rarely burns, tans darkly <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q53'>
+<p>53. What is the MOST important factor to consider when treating skin of color?</p>
+<div class='option' onclick="checkAnswer(this, 'q53', 'B')" data-opt='A'>A. Easily prone to sunburn <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q53', 'B')" data-opt='B'>B. Higher melanin content <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q53', 'B')" data-opt='C'>C. Thinner, more delicate skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q53', 'B')" data-opt='D'>D. Sensitive to touch <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q54'>
+<p>54. Which skin type has balanced oil and water content?</p>
+<div class='option' onclick="checkAnswer(this, 'q54', 'A')" data-opt='A'>A. Normal skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q54', 'A')" data-opt='B'>B. Dry skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q54', 'A')" data-opt='C'>C. Oily skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q54', 'A')" data-opt='D'>D. Combination skin <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q55'>
+<p>55. What is the MAIN purpose of exfoliation in a skincare routine?</p>
+<div class='option' onclick="checkAnswer(this, 'q55', 'D')" data-opt='A'>A. Decreases oil production <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q55', 'D')" data-opt='B'>B. Hydrates the skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q55', 'D')" data-opt='C'>C. Prevents sunburn <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q55', 'D')" data-opt='D'>D. Removes dead skin cells <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q56'>
+<p>56. Why is sun damage considered a skin condition?</p>
+<div class='option' onclick="checkAnswer(this, 'q56', 'D')" data-opt='A'>A. Genetic predisposition <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q56', 'D')" data-opt='B'>B. Overactive sebaceous glands <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q56', 'D')" data-opt='C'>C. Lack of skin hydration <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q56', 'D')" data-opt='D'>D. UV radiation exposure <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q57'>
+<p>57. Which skin condition is characterized by redness, inflammation, and visible blood vessels?</p>
+<div class='option' onclick="checkAnswer(this, 'q57', 'A')" data-opt='A'>A. Rosacea <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q57', 'A')" data-opt='B'>B. Acne <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q57', 'A')" data-opt='C'>C. Eczema <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q57', 'A')" data-opt='D'>D. Melasma <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q58'>
+<p>58. What skin condition is commonly associated with dry, scaly patches and itching?</p>
+<div class='option' onclick="checkAnswer(this, 'q58', 'A')" data-opt='A'>A. Eczema <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q58', 'A')" data-opt='B'>B. Rosacea <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q58', 'A')" data-opt='C'>C. Melasma <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q58', 'A')" data-opt='D'>D. Seborrheic dermatitis <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q59'>
+<p>59. Which skin condition is commonly associated with hormonal imbalances?</p>
+<div class='option' onclick="checkAnswer(this, 'q59', 'D')" data-opt='A'>A. Rosacea <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q59', 'D')" data-opt='B'>B. Eczema <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q59', 'D')" data-opt='C'>C. Sun damage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q59', 'D')" data-opt='D'>D. Acne <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q60'>
+<p>60. What is the role of palpation in skin analysis?</p>
+<div class='option' onclick="checkAnswer(this, 'q60', 'C')" data-opt='A'>A. Determining Fitzpatrick skin type <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q60', 'C')" data-opt='B'>B. Identifying genetic skin type <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q60', 'C')" data-opt='C'>C. Assessing skin texture and elasticity <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q60', 'C')" data-opt='D'>D. Evaluating skin hydration levels <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q61'>
+<p>61. How can lifestyle choices affect skin health and condition?</p>
+<div class='option' onclick="checkAnswer(this, 'q61', 'D')" data-opt='A'>A. Phone brand, favorite movie, pets <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q61', 'D')" data-opt='B'>B. Hair type, shoe size, eye color <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q61', 'D')" data-opt='C'>C. Car color, favorite cuisine, sleep position <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q61', 'D')" data-opt='D'>D. Diet, hydration, exercise, stress <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q62'>
+<p>62. Which tool is MOST commonly used to conduct a skin analysis?</p>
+<div class='option' onclick="checkAnswer(this, 'q62', 'C')" data-opt='A'>A. Digital caliper <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q62', 'C')" data-opt='B'>B. Wooden tongue depressor <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q62', 'C')" data-opt='C'>C. Magnifying lamp <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q62', 'C')" data-opt='D'>D. UV light scanner <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q63'>
+<p>63. How can estheticians recommend home care products with confidence?</p>
+<div class='option' onclick="checkAnswer(this, 'q63', 'B')" data-opt='A'>A. Promote only popular brands <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q63', 'B')" data-opt='B'>B. Understand ingredients and benefits <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q63', 'B')" data-opt='C'>C. Rely on marketing claims <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q63', 'B')" data-opt='D'>D. Ignore client's skin type <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q64'>
+<p>64. How can estheticians select appropriate products for a client's facial treatment?</p>
+<div class='option' onclick="checkAnswer(this, 'q64', 'A')" data-opt='A'>A. Based on individual's skin needs <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q64', 'A')" data-opt='B'>B. At random from product line <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q64', 'A')" data-opt='C'>C. By client's personal preferences <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q64', 'A')" data-opt='D'>D. Based on product popularity <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q65'>
+<p>65. What type of ingredient is beneficial for mature/aging skin to increase cell turnover?</p>
+<div class='option' onclick="checkAnswer(this, 'q65', 'A')" data-opt='A'>A. Retinol <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q65', 'A')" data-opt='B'>B. Salicylic acid <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q65', 'A')" data-opt='C'>C. Aloe vera <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q65', 'A')" data-opt='D'>D. Chamomile extract <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q66'>
+<p>66. What is the MAIN purpose of using serums in skin care products?</p>
+<div class='option' onclick="checkAnswer(this, 'q66', 'D')" data-opt='A'>A. Soothe and calm irritation <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q66', 'D')" data-opt='B'>B. Exfoliate dead skin cells <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q66', 'D')" data-opt='C'>C. Control oil production <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q66', 'D')" data-opt='D'>D. Deliver concentrated active ingredients <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q67'>
+<p>67. Which type of facial massage technique is MOST appropriate for a client with sensitive skin?</p>
+<div class='option' onclick="checkAnswer(this, 'q67', 'A')" data-opt='A'>A. Gentle, soothing strokes <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q67', 'A')" data-opt='B'>B. Deep tissue massage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q67', 'A')" data-opt='C'>C. Vigorous kneading <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q67', 'A')" data-opt='D'>D. High-frequency stimulation <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q68'>
+<p>68. What is the BEST way to ensure that the treatment room is clean and disinfected before and after a skin care procedure?</p>
+<div class='option' onclick="checkAnswer(this, 'q68', 'D')" data-opt='A'>A. Use only clean linens <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q68', 'D')" data-opt='B'>B. Disinfect tools only <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q68', 'D')" data-opt='C'>C. Rely on client cleanliness <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q68', 'D')" data-opt='D'>D. Perform pre- and post-service procedures <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q69'>
+<p>69. What is the difference between a cosmetic and a drug according to laws and regulations?</p>
+<div class='option' onclick="checkAnswer(this, 'q69', 'D')" data-opt='A'>A. Natural vs synthetic ingredients <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q69', 'D')" data-opt='B'>B. Price and packaging <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q69', 'D')" data-opt='C'>C. Color and fragrance <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q69', 'D')" data-opt='D'>D. Intended use and claims <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q70'>
+<p>70. How can an esthetician examine the skin more thoroughly during a skin analysis?</p>
+<div class='option' onclick="checkAnswer(this, 'q70', 'B')" data-opt='A'>A. Wash skin with soap <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q70', 'B')" data-opt='B'>B. Use a magnifying light <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q70', 'B')" data-opt='C'>C. Rely on client's description <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q70', 'B')" data-opt='D'>D. Apply a strong exfoliant <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q71'>
+<p>71. What is the MAIN purpose of using body scrubs in skin care products?</p>
+<div class='option' onclick="checkAnswer(this, 'q71', 'B')" data-opt='A'>A. Soothe sensitive skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q71', 'B')" data-opt='B'>B. Exfoliate dead skin cells <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q71', 'B')" data-opt='C'>C. Hydrate the skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q71', 'B')" data-opt='D'>D. Control oil production <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q72'>
+<p>72. What should be considered when performing a skin analysis for clients with mature skin?</p>
+<div class='option' onclick="checkAnswer(this, 'q72', 'D')" data-opt='A'>A. Pore size and pigmentation <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q72', 'D')" data-opt='B'>B. Hair growth and thickness <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q72', 'D')" data-opt='C'>C. Excessive oil production <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q72', 'D')" data-opt='D'>D. Hydration level and elasticity <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q73'>
+<p>73. What type of fan and mask brush should be used during a facial?</p>
+<div class='option' onclick="checkAnswer(this, 'q73', 'D')" data-opt='A'>A. Metal and sharp-edged <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q73', 'D')" data-opt='B'>B. Soft fabric and non-disinfectable <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q73', 'D')" data-opt='C'>C. Wooden and porous <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q73', 'D')" data-opt='D'>D. Nonporous and disinfectable <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q74'>
+<p>74. What is the massage movement that involves rapid shaking using both hands?</p>
+<div class='option' onclick="checkAnswer(this, 'q74', 'C')" data-opt='A'>A. Effleurage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q74', 'C')" data-opt='B'>B. Petrissage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q74', 'C')" data-opt='C'>C. Vibration <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q74', 'C')" data-opt='D'>D. Tapotement <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q75'>
+<p>75. What is the FIRST step in the skin analysis procedure?</p>
+<div class='option' onclick="checkAnswer(this, 'q75', 'A')" data-opt='A'>A. Review the client's health history questionnaire <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q75', 'A')" data-opt='B'>B. Place eye pads on eyes <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q75', 'A')" data-opt='C'>C. Apply a suitable cleanser <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q75', 'A')" data-opt='D'>D. Perform a visual analysis <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q76'>
+<p>76. Which characteristic is MOST indicative of sensitive skin?</p>
+<div class='option' onclick="checkAnswer(this, 'q76', 'C')" data-opt='A'>A. Large pore size <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q76', 'C')" data-opt='B'>B. Excessive oil production <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q76', 'C')" data-opt='C'>C. Easily irritated <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q76', 'C')" data-opt='D'>D. High muscle tone <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q77'>
+<p>77. What is the MAIN purpose of using foot creams in skin care products?</p>
+<div class='option' onclick="checkAnswer(this, 'q77', 'D')" data-opt='A'>A. Treat facial hyperpigmentation <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q77', 'D')" data-opt='B'>B. Promote collagen production <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q77', 'D')" data-opt='C'>C. Control oil production <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q77', 'D')" data-opt='D'>D. Soften and moisturize feet <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q78'>
+<p>78. What is the MAIN reason for using a magnifying lamp during a skin care procedure?</p>
+<div class='option' onclick="checkAnswer(this, 'q78', 'A')" data-opt='A'>A. To closely examine the skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q78', 'A')" data-opt='B'>B. To apply makeup evenly <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q78', 'A')" data-opt='C'>C. For better client lighting <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q78', 'A')" data-opt='D'>D. To warm up the skin <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q79'>
+<p>79. Which of the following is the BEST method for ensuring client safety and following health regulations before, during, and after treatments?</p>
+<div class='option' onclick="checkAnswer(this, 'q79', 'C')" data-opt='A'>A. Rely on client's self-assessment <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q79', 'C')" data-opt='B'>B. Skip skin analysis process <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q79', 'C')" data-opt='C'>C. Perform pre- and post-service procedures <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q79', 'C')" data-opt='D'>D. Use only sterilized equipment <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q80'>
+<p>80. What is a KEY component of a recommended skin care plan?</p>
+<div class='option' onclick="checkAnswer(this, 'q80', 'B')" data-opt='A'>A. Using harsh skin products <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q80', 'B')" data-opt='B'>B. Professional treatments <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q80', 'B')" data-opt='C'>C. Excessive sun exposure <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q80', 'B')" data-opt='D'>D. Ignoring skin hygiene <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q81'>
+<p>81. Which type of sunscreen is BEST for sensitive/reactive skin?</p>
+<div class='option' onclick="checkAnswer(this, 'q81', 'D')" data-opt='A'>A. Oil-based sunscreen <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q81', 'D')" data-opt='B'>B. Humectant-based sunscreen <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q81', 'D')" data-opt='C'>C. Chemical (organic compounds) sunscreen <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q81', 'D')" data-opt='D'>D. Physical (mineral-based) sunscreen <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q82'>
+<p>82. Which area of the body is typically outside the scope of practice for estheticians during massage services?</p>
+<div class='option' onclick="checkAnswer(this, 'q82', 'A')" data-opt='A'>A. Lower back <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q82', 'A')" data-opt='B'>B. Décolleté area <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q82', 'A')" data-opt='C'>C. Facial region <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q82', 'A')" data-opt='D'>D. Shoulders <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q83'>
+<p>83. Which massage manipulation is characterized by kneading movements that stimulate underlying tissues?</p>
+<div class='option' onclick="checkAnswer(this, 'q83', 'C')" data-opt='A'>A. Effleurage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q83', 'C')" data-opt='B'>B. Tapotement <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q83', 'C')" data-opt='C'>C. Petrissage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q83', 'C')" data-opt='D'>D. Vibration <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q84'>
+<p>84. What is the MAIN purpose of using body lotions in skin care products?</p>
+<div class='option' onclick="checkAnswer(this, 'q84', 'B')" data-opt='A'>A. To protect from UV damage <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q84', 'B')" data-opt='B'>B. To soften and smooth the skin <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q84', 'B')" data-opt='C'>C. To exfoliate dead skin cells <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q84', 'B')" data-opt='D'>D. To control oil production <span class='icon'></span></div>
+</div>
+<div class='question-block' id='q85'>
+<p>85. Which benefit is MOST associated with facial massage for clients?</p>
+<div class='option' onclick="checkAnswer(this, 'q85', 'D')" data-opt='A'>A. Reduces pore size <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q85', 'D')" data-opt='B'>B. Clears acne lesions <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q85', 'D')" data-opt='C'>C. Eliminates dark circles <span class='icon'></span></div>
+<div class='option' onclick="checkAnswer(this, 'q85', 'D')" data-opt='D'>D. Improves blood circulation <span class='icon'></span></div>
+</div>
+
+</div>
+<script>
+const answered = {};
+function checkAnswer(el, qid, correct) {
+  if (answered[qid]) return;
+  const selected = el.getAttribute('data-opt');
+  const icon = el.querySelector('.icon');
+  if (selected === correct) {
+    el.classList.add('correct');
+    icon.textContent = "✅";
+    answered[qid] = true;
+  } else {
+    el.classList.add('wrong');
+    icon.textContent = "❌";
+  }
+}
+</script>
+</body>
+</html>
