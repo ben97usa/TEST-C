@@ -726,20 +726,49 @@
       location.reload();
     }
 
-    function submitQuiz() {
-      const totalQuestions = document.querySelectorAll('.question-block').length;
-      let correctCount = 0;
 
-      Object.keys(answered).forEach(qid => {
-        if (answered[qid].selected === answered[qid].correct) {
-          correctCount++;
-        }
-      });
+function submitQuiz() {
+  const totalQuestions = 85; // total number of questions
+  let correctCount = 0;
+  let wrongCount = 0;
 
-      const scorePercent = ((correctCount / totalQuestions) * 100).toFixed(2);
-      const scoreBox = document.getElementById('score-box');
-      scoreBox.textContent = `🎯 You answered ${correctCount} out of ${totalQuestions} correctly. (${scorePercent}%)`;
+  document.querySelectorAll('.question-block').forEach(block => {
+    const qid = block.id;
+    const correct = answered[qid]?.correct;
+    const selected = answered[qid]?.selected;
+
+    const options = block.querySelectorAll('.option');
+    options.forEach(opt => {
+      const optVal = opt.getAttribute('data-opt');
+      const icon = opt.querySelector('.icon');
+
+      if (optVal === correct) {
+        opt.classList.add('correct');
+        icon.textContent = '✅';
+      }
+
+      if (optVal === selected && selected !== correct) {
+        opt.classList.add('wrong');
+        icon.textContent = '❌';
+      }
+    });
+
+    if (selected) {
+      if (selected === correct) {
+        correctCount++;
+      } else {
+        wrongCount++;
+      }
     }
+  });
+
+  const scorePercent = ((correctCount / totalQuestions) * 100).toFixed(2);
+  const scoreBox = document.getElementById('score-box');
+  scoreBox.innerHTML = `
+    🎯 You answered <strong>${correctCount}</strong> correctly and <strong>${wrongCount}</strong> incorrectly out of ${totalQuestions} questions. <br>
+    🧮 Your score: <strong>${scorePercent}%</strong>
+  `;
+}
   </script>
 </body>
 </html>
