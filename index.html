@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>85 Question Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -64,16 +64,23 @@
       margin-top: 10px;
       color: green;
     }
+    #score-box {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #2c3e50;
+    }
   </style>
 </head>
 <body>
   <h1>85 Question Quiz</h1>
   <button onclick="saveProgress()">💾 Save Progress</button>
   <button onclick="resetQuiz()">🔄 Reset</button>
+  <button onclick="submitQuiz()">✅ Submit</button>
   <p id="status-msg"></p>
+  <div id="score-box"></div>
 
   <div id="quiz-container">
-<div id="quiz-container">
 <div class='question-block' id='q1'>
 <p>1. Which skin conditions can microdermabrasion help diminish?</p>
 <div class='option' onclick="checkAnswer(this, 'q1', 'D')" data-opt='A'>A. Psoriasis, vitiligo, herpes outbreaks <span class='icon'></span></div>
@@ -678,6 +685,7 @@
       Object.keys(answered).forEach(qid => {
         const answer = answered[qid];
         const block = document.getElementById(qid);
+        if (!block) return;
         const options = block.querySelectorAll('.option');
         options.forEach(opt => {
           const optVal = opt.getAttribute('data-opt');
@@ -717,7 +725,21 @@
       localStorage.removeItem('quizAnswers');
       location.reload();
     }
+
+    function submitQuiz() {
+      const totalQuestions = document.querySelectorAll('.question-block').length;
+      let correctCount = 0;
+
+      Object.keys(answered).forEach(qid => {
+        if (answered[qid].selected === answered[qid].correct) {
+          correctCount++;
+        }
+      });
+
+      const scorePercent = ((correctCount / totalQuestions) * 100).toFixed(2);
+      const scoreBox = document.getElementById('score-box');
+      scoreBox.textContent = `🎯 You answered ${correctCount} out of ${totalQuestions} correctly. (${scorePercent}%)`;
+    }
   </script>
 </body>
 </html>
-
