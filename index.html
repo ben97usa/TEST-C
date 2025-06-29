@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEST C - 85 Question Quiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>85 Question Quiz</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
       background: #f4f4f4;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+    }
+    button:hover {
+      background-color: #0056b3;
     }
     .question-block {
       background: #fff;
@@ -43,10 +59,20 @@
     .icon {
       float: right;
     }
+    #status-msg {
+      font-weight: bold;
+      margin-top: 10px;
+      color: green;
+    }
   </style>
 </head>
 <body>
-<h1>TEST C - 85 Question Quiz</h1>
+  <h1>85 Question Quiz</h1>
+  <button onclick="saveProgress()">💾 Save Progress</button>
+  <button onclick="resetQuiz()">🔄 Reset</button>
+  <p id="status-msg"></p>
+
+  <div id="quiz-container">
 <div id="quiz-container">
 <div class='question-block' id='q1'>
 <p>1. Which skin conditions can microdermabrasion help diminish?</p>
@@ -646,20 +672,52 @@
 
 </div>
 <script>
-const answered = {};
-function checkAnswer(el, qid, correct) {
-  if (answered[qid]) return;
-  const selected = el.getAttribute('data-opt');
-  const icon = el.querySelector('.icon');
-  if (selected === correct) {
-    el.classList.add('correct');
-    icon.textContent = "✅";
-    answered[qid] = true;
-  } else {
-    el.classList.add('wrong');
-    icon.textContent = "❌";
-  }
-}
-</script>
+    const answered = JSON.parse(localStorage.getItem('quizAnswers') || '{}');
+
+    window.onload = function () {
+      Object.keys(answered).forEach(qid => {
+        const answer = answered[qid];
+        const block = document.getElementById(qid);
+        const options = block.querySelectorAll('.option');
+        options.forEach(opt => {
+          const optVal = opt.getAttribute('data-opt');
+          if (optVal === answer.selected) {
+            opt.classList.add(answer.selected === answer.correct ? 'correct' : 'wrong');
+            opt.querySelector('.icon').textContent = answer.selected === answer.correct ? '✅' : '❌';
+          }
+        });
+      });
+    };
+
+    function checkAnswer(el, qid, correct) {
+      if (answered[qid]) return;
+      const selected = el.getAttribute('data-opt');
+      const icon = el.querySelector('.icon');
+      if (selected === correct) {
+        el.classList.add('correct');
+        icon.textContent = '✅';
+      } else {
+        el.classList.add('wrong');
+        icon.textContent = '❌';
+      }
+      answered[qid] = { selected, correct };
+      localStorage.setItem('quizAnswers', JSON.stringify(answered));
+    }
+
+    function saveProgress() {
+      localStorage.setItem('quizAnswers', JSON.stringify(answered));
+      document.getElementById('status-msg').textContent = '✅ Progress saved!';
+      setTimeout(() => {
+        document.getElementById('status-msg').textContent = '';
+      }, 2000);
+    }
+
+    function resetQuiz() {
+      if (!confirm('Are you sure you want to reset all your answers and start over?')) return;
+      localStorage.removeItem('quizAnswers');
+      location.reload();
+    }
+  </script>
 </body>
 </html>
+
